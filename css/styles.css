@@ -211,245 +211,116 @@ input {
   Header
   /////////////////////// */
 
-/* header {
-  position: relative;
-  z-index: 100;
-  width: 100%;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--secondary-dark);
-  color: var(--main-white);
-  padding: 5px 30px;
-  height: 90px;
-}
-
-.logo {
-  font-size: var(--fs-600);
-  text-decoration: none; 
-  justify-self: center;
-  font-family: var(--ff-nav);
-  font-weight: var(--fw-400);
-  letter-spacing: 1px;
-  border: 1px solid red;
-}
-
-.navbar-items {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  list-style: none;
-}
-
-.navbar-items li a {
-  text-decoration: none;
-  color: var(--main-white);
-  padding: 1rem;
-  display: block;
-}
-
-.navbar-items li:hover a {
-  color: var(--blue-primary);
-}
-
-.navbar-items li.a:after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 5px;
-  height: 2px;
-  width: 100%;
-  background: var(--blue-primary);
-  opacity: 0;
-  transition: all 0.2s ease-out;
-}
-
-.navbar-items li:hover:after {
-  opacity: 1;
-  bottom: -8px;
-}
-
-.toggle-button a {
-  position: absolute;
-  top: 0.75rem;
-  right: 1rem;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-}
-
-.toggle-button .bar {
-  height: 3px;
-  width: 100%;
-  background-color: var(--main-white);
-  border-radius: 10px;
-}
-
-@media (max-width: 900px) {
-  .toggle-button a {
+  nav {
+    background: var(--secondary-dark);
+    padding: 20px 40px;
+  }
+  
+  nav ul.nav-bar {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-content: center;
-    margin: 20px;
+    list-style: none;
+    max-height: auto;
   }
-
-  .navbar-items {
-    display: none;
-    width: 100%;
-    background-color: var(--secondary-dark);
-    opacity: 0.9;
+  
+  nav ul.nav-bar li {
+    cursor: pointer;
+    align-self: center;
   }
-
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 5px 0px;
+  
+  nav ul.nav-bar li.logo {
+    flex: 1;
+    color: var(--main-white);
+    font-family: var(--ff-nav);
+    letter-spacing: 1px;
+    font-size: var(--fs-600);
+    font-weight: var(--fw-400);
+    cursor: default;
+    user-select: none;
   }
-
-  .navbar-items {
-    flex-direction: column;
-    width: 100%;
-    border: 2px solid var(--blue-primary);
+  
+  nav ul.nav-bar li.items {
+    position: relative;
+    width: auto;
+    margin: 0 16px;
+    text-align: center;
+    order: 3;
+    font-family: var(--ff-nav);
+    letter-spacing: 1px;
   }
-
-  .navbar-items li {
+  
+  nav ul.nav-bar li.items:after {
     position: absolute;
     content: "";
-    left: 10px;
-    bottom: 100px;
-    height: 20px;
+    left: 0;
+    bottom: 5px;
+    height: 2px;
     width: 100%;
     background: var(--blue-primary);
-    border: 1px solid red;
+    opacity: 0;
+    transition: all 0.2s ease-out;
   }
-
-  .lastnavitem {
-    margin-bottom: 5px;
+  
+  nav ul.nav-bar li.items:hover:after {
+    opacity: 1;
+    bottom: -8px;
   }
-
-  .navbar-items li {
-    text-align: center;
+  
+  nav ul.nav-bar li a {
+    color: var(--main-white);
+    font-size: var(--fs-300);
+    text-decoration: none;
+    transition: 0.4s;
   }
-
-  .navbar-items li a {
-    padding: 0.5rem 1rem;
+  
+  nav ul.nav-bar li:hover a {
+    color: var(--blue-primary);
   }
-
-  .navbar-items.active {
-    display: flex;
+  
+  nav ul.nav-bar li i {
+    font-size: 23px;
   }
-} */
-
-nav {
-  background: var(--secondary-dark);
-  padding: 23px 40px;
-  display: flex;
-  align-items: center;
-}
-
-nav ul.nav-bar {
-  display: flex;
-  align-content: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style: none;
-  width: 100%;
-}
-
-nav ul.nav-bar li {
-  cursor: pointer;
-  align-self: center;
-}
-
-
-nav ul.nav-bar li.logo {
-  flex: 1;
-  color: var(--main-white);
-  font-family: var(--ff-nav);
-  letter-spacing: 1px;
-  font-size: var(--fs-600);
-  font-weight: var(--fw-400);
-  cursor: default;
-  user-select: none;
-}
-
-nav ul.nav-bar li.items {
-  position: relative; /*needed to have line after*/
-  width: auto;
-  margin: 0 16px;
-  text-align: center;
-  font-family: var(--ff-nav);
-  letter-spacing: 1px;
-}
-
-nav ul.nav-bar li.items:after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 5px;
-  height: 3px;
-  width: 100%;
-  background: var(--blue-primary);
-  opacity: 0;
-  transition: all 0.2s ease-out;
-}
-
-nav ul.nav-bar li.items:hover:after {
-  opacity: 1;
-  bottom: -8px;
-}
-
-nav ul.nav-bar li a {
-  color: var(--main-white);
-  font-size: var(--fs-300);
-  text-decoration: none;
-  transition: 0.4s;
-}
-
-nav ul.nav-bar li:hover a {
-  color: var(--blue-primary);
-}
-
-nav ul.nav-bar li i {
-  font-size: 23px;
-}
-
-nav ul.nav-bar li.btn {
-  display: none;
-}
-
-nav ul.nav-bar li.btn.hide i:before {
-  content: "\f00d";
-}
-
-@media all and (max-width: 900px) {
-  nav {
-    padding: 5px 30px;
-  }
-  nav ul.nav-bar li.items {
-    width: 100%;
+  
+  nav ul.nav-bar li.btn {
     display: none;
   }
-  nav ul.nav-bar li.items.show {
-    display: block;
+  
+  nav ul.nav-bar li.btn.hide i:before {
+    content: "\f00d";
   }
-  nav ul.nav-bar li.btn {
-    display: block;
-  }
+  
+  @media all and (max-width: 900px) {
+    nav {
+      padding: 25px 40px;
+    }
+    nav.show {
+      height: auto;
+    }
+    nav ul.nav-bar li.items {
+      width: 100%;
+      display: none;
+    }
 
-  nav ul.nav-bar li.items:hover {
-    border-radius: 5px;
-    box-shadow: inset 0 0 5px var(--blue-primary), inset 0 0 10px #3f9efc;
-  }
-  nav ul.nav-bar li.items:hover:after {
-    opacity: 0;
-  }
-}
+    nav ul.nav-bar.show {
+      width: inherit;
+      background: var(--secondary-dark);
+    }
 
+    nav ul.nav-bar li.items.show {
+      display: block;
+      padding-bottom: 2px;
+    }
+
+    nav ul.nav-bar li.btn {
+      display: block;
+    }
+    nav ul.nav-bar li.items:hover:after {
+      opacity: 0;
+    }
+  }
+  
 
 /* //////////////////////
   Main 
@@ -461,6 +332,7 @@ nav ul.nav-bar li.btn.hide i:before {
   background: url("../img/background.png");
   background-position: center;
   background-size: cover;
+  z-index: 1;
 }
 
 .welcome p {

@@ -30,41 +30,29 @@
   <body>
     <!-- Main Menu------------------------------------------------->
 
-    <header>
-      <!-- <nav class="navbar">
-        <div class="logo">
-          <span>Damian Roiz</span>
-        </div>
-        <div class="toggle-button">
-          <a href="#">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </a>
-        </div>
-          <ul class="navbar-items">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#services">Programs</a></li>
-            <li>
-              <a href="https://damianroiz-blog.netlify.app/">Blog</a>
-            </li>
-            <li class="lastnavitem"><a href="./shop">Shop</a></li>
-          </ul>
-      </nav> -->
+    <header>     
       <nav>
-        <ul class="nav-bar">
-            <li class="logo">OnPoint</li>
-            <li class="items"><a href="https://damianroiz.com/index.html">Home</a></li>
-            <li class="items"><a href="https://damianroiz.com/onpoint/index.html#about">About</a></li>
-            <li class="items"><a href="https://damianroiz.com/onpoint/index.html#services">Services</a></li>
-            <li class="items"><a href="https://damianroiz-blog.netlify.app/index.html">Blog</a></li>
-            <li class="items"><a href="https://damianroiz.com/onpoint/shop/">Shop</a></li>
-            <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>    
-        </ul>
-    </nav>
-
-    </header>
+         <ul class="nav-bar">
+             <li class="logo">OnPoint</li>
+             <li class="items"><a href="https://damianroiz.com/index.html">Home</a></li>
+             <li class="items"><a href="https://damianroiz.com/onpoint/index.html#about">About</a></li>
+             <li class="items"><a href="https://damianroiz.com/onpoint/index.html#services">Services</a></li>
+             <li class="items"><a href="https://damianroiz-blog.netlify.app/index.html">Blog</a></li>
+             <li class="items"><a href="https://damianroiz.com/onpoint/shop/">Shop</a></li>
+             <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>    
+         </ul>
+     </nav>
+ 
+     <script> 
+         $(document).ready(function(){
+             $('.btn').click(function(){
+              $('nav').toggleClass('show');
+               $('.items').toggleClass('show');
+               $('ul li').toggleClass('hide');
+             });
+         });
+     </script>
+ </header>
 
     <!--mission statement------------------------------------------>
 
