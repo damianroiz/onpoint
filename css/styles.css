@@ -291,7 +291,7 @@ input {
     content: "\f00d";
   }
   
-  @media all and (max-width: 900px) {
+  @media all and (max-width: 768px) {
     nav {
       padding: 25px 40px;
     }
